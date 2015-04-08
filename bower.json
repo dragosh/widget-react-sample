@@ -1,0 +1,24 @@
+{
+  "name": "widget-react-demo",
+  "version": "1.0.0",
+  "description": "Widget React demo",
+  "main": "./scripts/main.js",
+  "authors": [
+    "dragosh"
+  ],
+  "moduleType": [
+    "umd"
+  ],
+  "ignore": [
+    "node_modules",
+    "web_modules",
+    "test"
+  ],
+  "private": true,
+  "dependencies": {
+    "react": "^0.13.1"
+  },
+  "devDependencies": {
+
+  }
+}

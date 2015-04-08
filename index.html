@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Sample React Widget</title>
+    <script src="node_modules/requirejs/require.js"></script>
+    <script src="config/requirejs.conf.js"></script>
+  </head>
+  <body>
+    <div id="widget-id"></div>
+  </body>
+
+
+  <script>
+  require(['react', 'scripts/main'], function (React, WidgetDemo) {
+
+        var __WIDGET__ = {
+            body:  document.body,
+            getPreference: function(name){
+                switch(name){
+                    case 'some-pref': return 'some-value'; break;
+                }
+            }
+        }
+        // base.requireWidget(__WIDGET__ , 'scripts/main');
+        React.render( React.createElement(WidgetDemo, { name: 'Dragos' }),  document.getElementById('widget-id'));
+    });
+
+
+
+  </script>
+</html>
