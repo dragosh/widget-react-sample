@@ -1,14 +1,7 @@
 import React from 'react';
+import styles from './styles';
+
 let {PropTypes} = React;
-let styles = {
-  container: {
-    backgroundColor: '#F5FCFF',
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20,
-    paddingTop: 20
-  }
-};
 
 export default class WidgetDemo extends React.Component {
     constructor(props) {
@@ -22,8 +15,7 @@ export default class WidgetDemo extends React.Component {
     }
     render() {
         return (
-            <div style={styles.container}>
-                <h1>Hello, {this.props.name}!</h1>
+            <div>
                 <button onClick={this.update.bind(this)}>{this.state.count}</button>
             </div>
         );
@@ -37,3 +29,5 @@ WidgetDemo.defaultProps = {
     name: 'Guest',
     initialCount: 5
 };
+
+React.render( <WidgetDemo />,  document.getElementById('widget-id'));

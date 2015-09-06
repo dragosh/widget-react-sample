@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Boilerplate for ReactJS widgets",
   "scripts": {
-    "start": "node config/server.js",
-    "build": "webpack -p --colors --config config/webpack.conf.js"
+    "build": "webpack --config tools/webpack-base.config.js",
+    "start": "node tools/server.js",
+    "deploy": "NODE_ENV=production webpack -p --config tools/webpack-base.config.js"
   },
   "repository": {
     "type": "git",
@@ -14,14 +15,26 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "babel": "^5.0.10",
-    "babel-core": "^5.0.10",
-    "babel-loader": "^5.0.0",
-    "requirejs": "^2.1.17",
-    "webpack": "^1.7.2",
-    "webpack-dev-server": "^1.7.0"
+    "autoprefixer": "^6.0.0",
+    "babel-core": "^5.8.23",
+    "babel-loader": "^5.3.2",
+    "bootstrap-sass": "^3.3.5",
+    "css-loader": "^0.17.0",
+    "deepmerge": "^0.2.10",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "file-loader": "^0.8.4",
+    "font-awesome": "^4.4.0",
+    "handlebars": "^3.0.3",
+    "handlebars-loader": "^1.1.1",
+    "postcss-loader": "^0.6.0",
+    "sass-loader": "^2.0.1",
+    "style-loader": "^0.12.3",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.12.1",
+    "webpack-dev-server": "^1.10.1"
   },
   "dependencies": {
-    "react": "^0.13.1"
+    "lodash-node": "^3.10.1",
+    "react": "^0.13.3"
   }
 }

@@ -1,16 +1,9 @@
-__tmp
 node_modules
+coverage
 web_modules
 bower_components
-resources
-features
-docs
-vendors
-sandbox
-pids
 logs
 results
-target
 *.seed
 *.log
 *.csv
@@ -20,7 +13,6 @@ target
 *.gz
 *.sublime*
 *.node
-coverage
 *.orig
 .idea
 .DS_Store
